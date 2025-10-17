@@ -33,8 +33,13 @@ const AboutSection = () => {
               </p>
 
               <Button asChild className="rounded-full">
-                <a href="#saiba-mais" className="inline-flex items-center gap-2">
-                  Learn More
+                <a
+                  href="https://www.instagram.com/di.advocacia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
+                  Conhecer mais
                   <svg
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"
                     fill="none"
