@@ -48,9 +48,9 @@ const ExpertiseSection = () => {
           </div>
           <div className="aspect-[4/3] overflow-hidden bg-gray-200">
             <img
-              src="/placeholder.svg?height=400&width=600"
+              src="/consumidor.png"
               alt="Direito Empresarial"
-              className="h-full w-full object-cover transition-transform hover:scale-105 duration-700"
+              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
             />
           </div>
         </div>
@@ -59,9 +59,9 @@ const ExpertiseSection = () => {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div className="aspect-[4/3] overflow-hidden bg-gray-200 lg:order-first">
             <img
-              src="/placeholder.svg?height=400&width=600"
+              src="/previdenciario.png"
               alt="Contencioso Cível"
-              className="h-full w-full object-cover transition-transform hover:scale-105 duration-700"
+              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
             />
           </div>
           <div className="space-y-6">
@@ -130,9 +130,9 @@ const ExpertiseSection = () => {
           </div>
           <div className="aspect-[4/3] overflow-hidden bg-gray-200">
             <img
-              src="/placeholder.svg?height=400&width=600"
+              src="/trabalhista.png"
               alt="Direito do Trabalho"
-              className="h-full w-full object-cover transition-transform hover:scale-105 duration-700"
+              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
             />
           </div>
         </div>
@@ -143,7 +143,7 @@ const ExpertiseSection = () => {
             <img
               src="/tributario.png"
               alt="Família e Sucessões"
-              className="h-full w-full object-cover transition-transform hover:scale-105 duration-700"
+              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
             />
           </div>
           <div className="space-y-6">
