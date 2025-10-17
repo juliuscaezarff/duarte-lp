@@ -1,14 +1,16 @@
 import CTA from "@/components/cta";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Mail, Instagram, Phone } from "lucide-react";
 import FAQsThree from "@/components/faqt";
 import HeroSection from "@/components/hero-section";
 import AboutSection from "@/components/about-section";
 import ExpertiseSection from "@/components/expertise-section";
 import DifferentialsSection from "@/components/differentials-section";
 import { ContactButtonGroup } from "@/components/ui/contact-button-group";
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: "DUARTE & IANNUZZI ADVOCACIA",
+  description: "Advocacia estratégica para soluções inteligentes e eficazes.",
+};
 
 export default function Home() {
   return (
