@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
@@ -33,11 +34,11 @@ const AboutSection = () => {
               </p>
 
               <Button asChild className="rounded-full">
-                <a
+                <Link
                   href="https://www.instagram.com/di.advocacia/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-2 text-sm font-light  transition-all hover:gap-4 "
                 >
                   Conhecer mais
                   <svg
@@ -53,7 +54,7 @@ const AboutSection = () => {
                       d="M13 7l5 5m0 0l-5 5m5-5H6"
                     />
                   </svg>
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

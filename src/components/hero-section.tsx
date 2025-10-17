@@ -7,9 +7,9 @@ const HeroSection = () => {
     <section className="relative w-full bg-[#1b3659] pb-20 lg:pb-28 mt-12">
       <div className="absolute inset-0 w-full h-full">
         <div className="w-full h-full opacity-10">
-          <img 
-            src="/stroke_quadrado.png" 
-            alt="Background pattern" 
+          <img
+            src="/stroke_quadrado.png"
+            alt="Background pattern"
             className="w-full h-full object-cover"
           />
         </div>
@@ -33,7 +33,12 @@ const HeroSection = () => {
             </p>
             <div>
               <Button asChild className="rounded-full">
-                <Link href="#contato" className="inline-flex items-center gap-2">
+                <Link
+                  href="https://wa.me/5592996037337"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-light  transition-all hover:gap-4 "
+                >
                   Fale com um advogado
                   <svg
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"

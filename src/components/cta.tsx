@@ -72,7 +72,12 @@ export default function CTA() {
           </p>
 
           <Button asChild className="rounded-full">
-            <Link href="#contato" className="inline-flex items-center gap-2">
+            <Link
+              href="https://wa.me/5592996037337"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-light  transition-all hover:gap-4 "
+            >
               Fale com um advogado
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"

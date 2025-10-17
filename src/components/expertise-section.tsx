@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ExpertiseSection = () => {
   return (
     <section className="relative mt-24 py-16">
@@ -29,7 +31,12 @@ const ExpertiseSection = () => {
               cobranças indevidas, produtos ou serviços com vícios e práticas
               abusivas.
             </p>
-            <button className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]">
+            <Link
+              href="https://wa.me/5592996037337"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]"
+            >
               Falar com especialista
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -44,7 +51,7 @@ const ExpertiseSection = () => {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
           <div className="aspect-[4/3] overflow-hidden">
             <img
@@ -77,8 +84,13 @@ const ExpertiseSection = () => {
               assegurando que cada direito previdenciário seja corretamente
               reconhecido.
             </p>
-            <button className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]">
-              Ver casos atendidos
+            <Link
+              href="https://wa.me/5592996037337"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]"
+            >
+              Saber mais
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
                 fill="none"
@@ -92,7 +104,7 @@ const ExpertiseSection = () => {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -111,7 +123,12 @@ const ExpertiseSection = () => {
               ênfase em direitos rescisórios, horas extras e reconhecimento de
               vínculos.
             </p>
-            <button className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]">
+            <Link
+              href="https://wa.me/5592996037337"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]"
+            >
               Solicitar avaliação
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -126,7 +143,7 @@ const ExpertiseSection = () => {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
           <div className="aspect-[4/3] overflow-hidden ">
             <img
@@ -158,7 +175,12 @@ const ExpertiseSection = () => {
               Análise e gestão de tributos, prevenindo autuações e orientando
               sobre obrigações fiscais com segurança e planejamento jurídico.
             </p>
-            <button className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]">
+            <Link
+              href="https://wa.me/5592996037337"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]"
+            >
               Saber mais
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -173,7 +195,7 @@ const ExpertiseSection = () => {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

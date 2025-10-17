@@ -73,10 +73,25 @@ export default function FAQsThree() {
               <p className="text-[#7d7d7d] mt-6 text-sm leading-relaxed">
                 Não encontrou o que procura? Entre em contato conosco{" "}
                 <Link
-                  href="#contato"
-                  className="text-[#1b3659] font-medium hover:underline"
+                  href="https://wa.me/5592996037337"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-sm font-light text-[#1b3659] transition-all hover:gap-4 hover:text-[#476288]"
                 >
-                  através do WhatsApp
+                  Saber mais
+                  <svg
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
                 </Link>
               </p>
             </div>
@@ -87,7 +102,7 @@ export default function FAQsThree() {
                 <AccordionItem
                   key={item.id}
                   value={item.id}
-                  className="bg-white shadow-sm  border border-black/10 px-4 last:border-b"
+                  className="bg-white shadow-sm rounded-lg  border border-black/10 px-4 last:border-b"
                 >
                   <AccordionTrigger className="cursor-pointer items-center py-5 hover:no-underline">
                     <div className="flex items-center gap-3">
