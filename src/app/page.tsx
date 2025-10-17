@@ -5,9 +5,9 @@ import AboutSection from "@/components/about-section";
 import ExpertiseSection from "@/components/expertise-section";
 import DifferentialsSection from "@/components/differentials-section";
 import { ContactButtonGroup } from "@/components/ui/contact-button-group";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "DUARTE & IANNUZZI ADVOCACIA",
   description: "Advocacia estratégica para soluções inteligentes e eficazes.",
 };
