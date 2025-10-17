@@ -6,7 +6,7 @@ const AboutSection = () => {
       <div>
         <div className="flex items-center space-x-2 mb-16">
           <span className="h-px w-12 bg-black"></span>
-          <span className="text-sm tracking-wider">ABOUT US</span>
+          <span className="text-sm tracking-wider">Sobre nós</span>
         </div>
 
         <div className="space-y-12">

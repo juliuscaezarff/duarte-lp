@@ -19,10 +19,10 @@ interface ContactButtonGroupProps {
 
 export function ContactButtonGroup({
   instagramUrl = "https://www.instagram.com/di.advocacia/",
-  whatsappNumber = "5511999999999",
-  email = "contato@exemplo.com",
+  whatsappNumber = "5592996037337",
+  email = "duarteadvocacia@diadv.com",
   address = "Rua Valério Botelho de Andrade, nº 190, Sala 11, São Francisco, Manaus/AM",
-  coordinates = { lat: -23.5505, lng: -46.6333 }, // São Paulo como exemplo
+  coordinates = { lat: -3.1096881, lng: -60.0112901 }, // Coordenadas reais do endereço em Manaus
 }: ContactButtonGroupProps) {
   const [locationModalOpen, setLocationModalOpen] = useState(false);
 

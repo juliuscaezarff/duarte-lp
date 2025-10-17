@@ -32,11 +32,11 @@ export default function Home() {
               <div className="h-2 w-2 rounded-full bg-white"></div>
             </div>
             <ContactButtonGroup
-              instagramUrl="https://instagram.com/seu_perfil"
-              whatsappNumber="5511999999999"
-              email="contato@exemplo.com"
-              address="Rua Exemplo, 123 - Bairro - Cidade, Estado - CEP 00000-000"
-              coordinates={{ lat: -23.5505, lng: -46.6333 }}
+              instagramUrl="https://www.instagram.com/di.advocacia/"
+              whatsappNumber="5592996037337"
+              email="duarteadvocacia@diadv.com"
+              address="Rua Valério Botelho de Andrade, nº 190, Sala 11, São Francisco, Manaus/AM"
+              coordinates={{ lat: -3.1096881, lng: -60.0112901 }}
             />
           </div>
         </header>
@@ -53,7 +53,7 @@ export default function Home() {
 
       <CTA />
 
-      <footer className="border-t border-gray-200 bg-white">
+      <footer>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
           <div className="flex  items-center justify-between gap-6">
             <div className="flex items-center space-x-2">
@@ -62,7 +62,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <ContactButtonGroup />
+              <ContactButtonGroup
+                instagramUrl="https://www.instagram.com/di.advocacia/"
+                whatsappNumber="5592996037337"
+                email="duarteadvocacia@diadv.com"
+                address="Rua Valério Botelho de Andrade, nº 190, Sala 11, São Francisco, Manaus/AM"
+                coordinates={{ lat: -3.1096881, lng: -60.0112901 }}
+              />
 
               <p className="text-xs text-gray-500">
                 © {new Date().getFullYear()} Todos os direitos reservados

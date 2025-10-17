@@ -46,7 +46,7 @@ const ExpertiseSection = () => {
               </svg>
             </button>
           </div>
-          <div className="aspect-[4/3] overflow-hidden bg-gray-200">
+          <div className="aspect-[4/3] overflow-hidden">
             <img
               src="/consumidor.png"
               alt="Direito Empresarial"
@@ -57,7 +57,7 @@ const ExpertiseSection = () => {
 
         {/* Area 2 - Image Left, Text Right */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="aspect-[4/3] overflow-hidden bg-gray-200 lg:order-first">
+          <div className="aspect-[4/3] overflow-hidden  lg:order-first">
             <img
               src="/previdenciario.png"
               alt="Contencioso Cível"
@@ -128,7 +128,7 @@ const ExpertiseSection = () => {
               </svg>
             </button>
           </div>
-          <div className="aspect-[4/3] overflow-hidden bg-gray-200">
+          <div className="aspect-[4/3] overflow-hidden ">
             <img
               src="/trabalhista.png"
               alt="Direito do Trabalho"
@@ -139,7 +139,7 @@ const ExpertiseSection = () => {
 
         {/* Area 4 - Image Left, Text Right */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="aspect-[4/3] overflow-hidden bg-[#c9ad7c] lg:order-first">
+          <div className="aspect-[4/3] overflow-hidden  lg:order-first">
             <img
               src="/tributario.png"
               alt="Família e Sucessões"
