@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const AboutSection = () => {
   return (
     <section className="relative  py-16">
@@ -30,22 +32,24 @@ const AboutSection = () => {
                 segurança.
               </p>
 
-              <button className="group inline-flex items-center gap-2 rounded-full border-2 border-[#1b3659] bg-[#1b3659] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#476288] hover:border-[#476288] hover:gap-4">
-                Learn More
-                <svg
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
+              <Button asChild className="rounded-full">
+                <a href="#saiba-mais" className="inline-flex items-center gap-2">
+                  Learn More
+                  <svg
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </a>
+              </Button>
             </div>
           </div>
         </div>
