@@ -33,8 +33,8 @@ export default function Home() {
             <Image src="/logo-black.png" alt="logo" width={190} height={190} />
             <ContactButtonGroup
               instagramUrl="https://www.instagram.com/di.advocacia/"
-              whatsappNumber="5592996037337"
-              email="duarteadvocacia@diadv.com"
+              whatsappUrl="https://wa.me/5592996037337"
+              emailUrl="mailto:duarteadvocacia@diadv.com"
               address="Rua Valério Botelho de Andrade, nº 190, Sala 11, São Francisco, Manaus/AM"
               coordinates={{ lat: -3.1096881, lng: -60.0112901 }}
             />
@@ -61,8 +61,8 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <ContactButtonGroup
                 instagramUrl="https://www.instagram.com/di.advocacia/"
-                whatsappNumber="5592996037337"
-                email="duarteadvocacia@diadv.com"
+                whatsappUrl="https://wa.me/5592996037337"
+                emailUrl="mailto:duarteadvocacia@diadv.com"
                 address="Rua Valério Botelho de Andrade, nº 190, Sala 11, São Francisco, Manaus/AM"
                 coordinates={{ lat: -3.1096881, lng: -60.0112901 }}
               />

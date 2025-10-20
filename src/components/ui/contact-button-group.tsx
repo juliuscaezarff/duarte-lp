@@ -1,85 +1,171 @@
 "use client";
 
 import { useState } from "react";
-import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Instagram, MessageCircle, Mail, MapPin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
-import { LocationModal } from "@/components/ui/location-modal";
+import { LocationModal } from "./location-modal";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 interface ContactButtonGroupProps {
-  instagramUrl?: string;
-  whatsappNumber?: string;
-  email?: string;
-  address?: string;
-  coordinates?: {
+  instagramUrl: string;
+  whatsappUrl: string;
+  emailUrl: string;
+  address: string;
+  coordinates: {
     lat: number;
     lng: number;
   };
 }
 
 export function ContactButtonGroup({
-  instagramUrl = "https://www.instagram.com/di.advocacia/",
-  whatsappNumber = "5592996037337",
-  email = "duarteadvocacia@diadv.com",
-  address = "Rua Valério Botelho de Andrade, nº 190, Sala 11, São Francisco, Manaus/AM",
-  coordinates = { lat: -3.1096881, lng: -60.0112901 }, // Coordenadas reais do endereço em Manaus
+  instagramUrl,
+  whatsappUrl,
+  emailUrl,
+  address,
+  coordinates,
 }: ContactButtonGroupProps) {
   const [locationModalOpen, setLocationModalOpen] = useState(false);
-
-  const handleInstagram = () => {
-    window.open(instagramUrl, "_blank");
-  };
-
-  const handleWhatsApp = () => {
-    window.open(`https://wa.me/${whatsappNumber}`, "_blank");
-  };
-
-  const handleEmail = () => {
-    window.location.href = `mailto:${email}`;
-  };
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <ButtonGroup
-        aria-label="Opções de contato"
-        className="shadow-sm border-none"
-      >
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={handleInstagram}
-          className="rounded-r-none border-r-0 hover:bg-[#c9ad7c] hover:text-white bg-transparent"
-        >
-          <Instagram className="h-5 w-5 mr-2" />
-        </Button>
+      {/* Desktop Button Group */}
+      <div className="hidden md:block">
+        <ButtonGroup aria-label="Opções de contato" className="shadow-sm">
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="rounded-r-none border-r-0 bg-transparent"
+          >
+            <Link href={instagramUrl} target="_blank" rel="noopener noreferrer">
+              <Instagram className="h-5 w-5 mr-2" />
+            </Link>
+          </Button>
 
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={handleWhatsApp}
-          className="rounded-none border-r-0 hover:bg-[#c9ad7c] hover:text-white bg-transparent"
-        >
-          <MessageCircle className="h-5 w-5 mr-2" />
-        </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="rounded-none border-r-0 bg-transparent"
+          >
+            <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="h-5 w-5 mr-2" />
+            </Link>
+          </Button>
 
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={handleEmail}
-          className="rounded-none border-r-0 hover:bg-[#c9ad7c] hover:text-white bg-transparent"
-        >
-          <Mail className="h-5 w-5 mr-2" />
-        </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="rounded-none border-r-0 bg-transparent"
+          >
+            <Link href={emailUrl}>
+              <Mail className="h-5 w-5 mr-2" />
+            </Link>
+          </Button>
 
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={() => setLocationModalOpen(true)}
-          className="rounded-l-none hover:bg-[#c9ad7c] hover:text-white bg-transparent"
-        >
-          <MapPin className="h-5 w-5 mr-2" />
-        </Button>
-      </ButtonGroup>
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => setLocationModalOpen(true)}
+            className="rounded-l-none"
+          >
+            <MapPin className="h-5 w-5 mr-2" />
+          </Button>
+        </ButtonGroup>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <SheetTrigger asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full bg-transparent"
+            >
+              <Menu className="h-5 w-5 mr-2" />
+              Menu de Contato
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="bottom" className="h-auto">
+            <SheetHeader>
+              <SheetTitle>Entre em Contato</SheetTitle>
+              <SheetDescription>
+                Escolha a melhor forma de nos contatar
+              </SheetDescription>
+            </SheetHeader>
+            <div className="grid gap-3 py-6">
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="w-full justify-start bg-transparent"
+              >
+                <Link
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram className="h-5 w-5 mr-3" />
+                  Instagram
+                </Link>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="w-full justify-start bg-transparent"
+              >
+                <Link
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="h-5 w-5 mr-3" />
+                  WhatsApp
+                </Link>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="w-full justify-start bg-transparent"
+              >
+                <Link href={emailUrl}>
+                  <Mail className="h-5 w-5 mr-3" />
+                  Email
+                </Link>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  setLocationModalOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full justify-start bg-transparent"
+              >
+                <MapPin className="h-5 w-5 mr-3" />
+                Localização
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
 
       <LocationModal
         open={locationModalOpen}
