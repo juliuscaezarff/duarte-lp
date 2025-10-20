@@ -16,9 +16,8 @@ const ExpertiseSection = () => {
       </div>
 
       <div className="space-y-24">
-        {/* Area 1 - Text Left, Image Right */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="space-y-6">
+          <div className="order-1 space-y-6 lg:order-1">
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-6xl font-light text-[#c9ad7c]">01</span>
               <span className="h-px flex-1 bg-gray-300"></span>
@@ -53,25 +52,18 @@ const ExpertiseSection = () => {
               </svg>
             </Link>
           </div>
-          <div className="aspect-[4/3] overflow-hidden">
+
+          <div className="order-2 lg:order-2 aspect-[4/3] overflow-hidden">
             <img
               src="/consumidor.png"
-              alt="Direito Empresarial"
+              alt="Direito do Consumidor"
               className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
             />
           </div>
         </div>
 
-        {/* Area 2 - Image Left, Text Right */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="aspect-[4/3] overflow-hidden  lg:order-first">
-            <img
-              src="/previdenciario.png"
-              alt="Contencioso Cível"
-              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
-            />
-          </div>
-          <div className="space-y-6">
+          <div className="order-1 space-y-6 lg:order-2">
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-6xl font-light text-[#c9ad7c]">02</span>
               <span className="h-px flex-1 bg-gray-300"></span>
@@ -106,11 +98,18 @@ const ExpertiseSection = () => {
               </svg>
             </Link>
           </div>
+
+          <div className="order-2 lg:order-1 aspect-[4/3] overflow-hidden">
+            <img
+              src="/previdenciario.png"
+              alt="Direito Previdenciário"
+              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
+            />
+          </div>
         </div>
 
-        {/* Area 3 - Text Left, Image Right */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="space-y-6">
+          <div className="order-1 space-y-6 lg:order-1">
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-6xl font-light text-[#c9ad7c]">03</span>
               <span className="h-px flex-1 bg-gray-300"></span>
@@ -145,25 +144,18 @@ const ExpertiseSection = () => {
               </svg>
             </Link>
           </div>
-          <div className="aspect-[4/3] overflow-hidden ">
+
+          <div className="order-2 lg:order-2 aspect-[4/3] overflow-hidden">
             <img
               src="/trabalhista.png"
-              alt="Direito do Trabalho"
+              alt="Direito Trabalhista"
               className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
             />
           </div>
         </div>
 
-        {/* Area 4 - Image Left, Text Right */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="aspect-[4/3] overflow-hidden  lg:order-first">
-            <img
-              src="/tributario.png"
-              alt="Família e Sucessões"
-              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
-            />
-          </div>
-          <div className="space-y-6">
+          <div className="order-1 space-y-6 lg:order-2">
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-6xl font-light text-[#c9ad7c]">04</span>
               <span className="h-px flex-1 bg-gray-300"></span>
@@ -196,6 +188,14 @@ const ExpertiseSection = () => {
                 />
               </svg>
             </Link>
+          </div>
+
+          <div className="order-2 lg:order-1 aspect-[4/3] overflow-hidden">
+            <img
+              src="/tributario.png"
+              alt="Direito Tributário"
+              className="h-full w-full rounded-lg object-cover transition-transform hover:scale-105 duration-700"
+            />
           </div>
         </div>
       </div>
