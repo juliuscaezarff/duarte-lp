@@ -109,7 +109,7 @@ export default function FAQsThree() {
                       <div className="flex size-6">
                         <DynamicIcon
                           name={item.icon}
-                          className="m-auto size-4 text-[#1b3659]"
+                          className="m-auto size-4 text-[#c9ad7c]"
                         />
                       </div>
                       <span className="text-sm font-medium text-black">
