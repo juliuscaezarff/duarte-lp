@@ -1,18 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Instagram, MessageCircle, Mail, MapPin, Menu } from "lucide-react";
-import { Button } from "./button";
-import { ButtonGroup } from "./button-group";
-import { LocationModal } from "./location-modal";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./sheet";
+import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
+import { LocationModal } from "@/components/ui/location-modal";
 
 interface ContactButtonGroupProps {
   instagramUrl?: string;
@@ -34,8 +26,6 @@ export function ContactButtonGroup({
 }: ContactButtonGroupProps) {
   const [locationModalOpen, setLocationModalOpen] = useState(false);
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const handleInstagram = () => {
     window.open(instagramUrl, "_blank");
   };
@@ -48,112 +38,48 @@ export function ContactButtonGroup({
     window.location.href = `mailto:${email}`;
   };
 
-  const handleLocation = () => {
-    setLocationModalOpen(true);
-    setMobileMenuOpen(false);
-  };
-
   return (
-    <div>
-      <div className="hidden md:block">
-        <ButtonGroup aria-label="Opções de contato" className="shadow-sm">
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={handleInstagram}
-            className="rounded-r-none border-r-0 bg-transparent"
-          >
-            <Instagram className="h-5 w-5 mr-2" />
-          </Button>
+    <>
+      <ButtonGroup
+        aria-label="Opções de contato"
+        className="shadow-sm border-none"
+      >
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={handleInstagram}
+          className="rounded-r-none border-r-0 hover:bg-[#c9ad7c] hover:text-white bg-transparent"
+        >
+          <Instagram className="h-5 w-5 mr-2" />
+        </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={handleWhatsApp}
-            className="rounded-none border-r-0  bg-transparent"
-          >
-            <MessageCircle className="h-5 w-5 mr-2" />
-          </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={handleWhatsApp}
+          className="rounded-none border-r-0 hover:bg-[#c9ad7c] hover:text-white bg-transparent"
+        >
+          <MessageCircle className="h-5 w-5 mr-2" />
+        </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={handleEmail}
-            className="rounded-none border-r-0  bg-transparent"
-          >
-            <Mail className="h-5 w-5 mr-2" />
-          </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={handleEmail}
+          className="rounded-none border-r-0 hover:bg-[#c9ad7c] hover:text-white bg-transparent"
+        >
+          <Mail className="h-5 w-5 mr-2" />
+        </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => setLocationModalOpen(true)}
-            className="rounded-l-none "
-          >
-            <MapPin className="h-5 w-5 mr-2" />
-          </Button>
-        </ButtonGroup>
-      </div>
-
-      <div className="md:hidden">
-        <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-          <SheetTrigger asChild>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full bg-transparent"
-            >
-              <Menu className="h-5 w-5 " />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="bottom" className="h-auto">
-            <SheetHeader>
-              <SheetTitle>Entre em Contato</SheetTitle>
-              <SheetDescription>
-                Escolha a melhor forma de nos contatar
-              </SheetDescription>
-            </SheetHeader>
-            <div className="grid gap-3 py-6">
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleInstagram}
-                className="w-full justify-start bg-transparent"
-              >
-                <Instagram className="h-5 w-5 mr-3" />
-                Instagram
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleWhatsApp}
-                className="w-full justify-start bg-transparent"
-              >
-                <MessageCircle className="h-5 w-5 mr-3" />
-                WhatsApp
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleEmail}
-                className="w-full justify-start bg-transparent"
-              >
-                <Mail className="h-5 w-5 mr-3" />
-                Email
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleLocation}
-                className="w-full justify-start bg-transparent"
-              >
-                <MapPin className="h-5 w-5 mr-3" />
-                Localização
-              </Button>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={() => setLocationModalOpen(true)}
+          className="rounded-l-none hover:bg-[#c9ad7c] hover:text-white bg-transparent"
+        >
+          <MapPin className="h-5 w-5 mr-2" />
+        </Button>
+      </ButtonGroup>
 
       <LocationModal
         open={locationModalOpen}
@@ -161,6 +87,6 @@ export function ContactButtonGroup({
         address={address}
         coordinates={coordinates}
       />
-    </div>
+    </>
   );
 }
