@@ -85,7 +85,9 @@ export default function FAQsThree() {
                     stroke="currentColor"
                     strokeWidth="1.5"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
+                    <title>Seta apontando para a direita</title>
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
