@@ -6,6 +6,7 @@ import ExpertiseSection from "@/components/expertise-section";
 import DifferentialsSection from "@/components/differentials-section";
 import { ContactButtonGroup } from "@/components/ui/contact-button-group";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "DUARTE & IANNUZZI ADVOCACIA",
@@ -29,10 +30,7 @@ export default function Home() {
 
         <header className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <div className="flex items-center justify-between py-6">
-            <div className="flex space-x-2">
-              <div className="h-2 w-2 rounded-full bg-white"></div>
-              <div className="h-2 w-2 rounded-full bg-white"></div>
-            </div>
+            <Image src="/logo-black.png" alt="logo" width={190} height={190} />
             <ContactButtonGroup
               instagramUrl="https://www.instagram.com/di.advocacia/"
               whatsappNumber="5592996037337"
@@ -58,10 +56,7 @@ export default function Home() {
       <footer>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
           <div className="flex  items-center justify-between gap-6">
-            <div className="flex items-center space-x-2">
-              <div className="h-2 w-2 rounded-full bg-black"></div>
-              <div className="h-2 w-2 rounded-full bg-black"></div>
-            </div>
+            <Image src="/logo-color.png" alt="logo" width={190} height={190} />
 
             <div className="flex flex-col gap-4">
               <ContactButtonGroup
