@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Instagram, MessageCircle, Mail, MapPin, Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ButtonGroup } from "@/components/ui/button-group";
-import { LocationModal } from "@/components/ui/location-modal";
+import { Button } from "./button";
+import { ButtonGroup } from "./button-group";
+import { LocationModal } from "./location-modal";
 import {
   Sheet,
   SheetContent,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "./sheet";
 
 interface ContactButtonGroupProps {
   instagramUrl?: string;
