@@ -54,7 +54,7 @@ export function ContactButtonGroup({
   };
 
   return (
-    <>
+    <div>
       <div className="hidden md:block">
         <ButtonGroup aria-label="Opções de contato" className="shadow-sm">
           <Button
@@ -161,6 +161,6 @@ export function ContactButtonGroup({
         address={address}
         coordinates={coordinates}
       />
-    </>
+    </div>
   );
 }
