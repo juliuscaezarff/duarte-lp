@@ -94,8 +94,7 @@ export function ContactButtonGroup({
               size="lg"
               className="w-full bg-transparent"
             >
-              <Menu className="h-5 w-5 mr-2" />
-              Menu de Contato
+              <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
           <SheetContent side="bottom" className="h-auto">
